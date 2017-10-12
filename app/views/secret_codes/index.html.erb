@@ -1,0 +1,26 @@
+<%= render partial: 'new'%>
+<br/>
+<br/>
+
+<h2>Secret codes</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>User</th>
+        <th>Created at</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+
+		<% @codes.each do |code| %>
+			<tr>
+				<td><%= code.code %></td>
+				<td><%= code.user_email %></td>
+				<td><%= code.created_at %></td>
+			</tr>
+		<% end %>
+
+    </tbody>
+  </table>
